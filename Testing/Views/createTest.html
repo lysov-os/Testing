@@ -1,0 +1,82 @@
+<div>
+	<div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Данные по тесту</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-lg-6">						
+						<input type="text" ng-model="name" class="form-control" placeholder="Название теста">
+					</div>
+				</div>				
+				<div class="row">
+					<div class="col-lg-6">
+						<input type="text" class="form-control" placeholder="Тестируемые">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="panel panel-default">
+			<div class="panel-heading">Добавление вопроса</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-lg-6">
+						<input ng-model="addingQuestion.title" type="text" class="form-control" placeholder="Вопрос" >
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<input ng-model="addingQuestion.rightAnswer" type="text" class="form-control" placeholder="Правильный ответ" >
+					</div>
+				</div>			
+
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="input-group">
+							<input type="text" class="form-control" ng-model="addingQuestion.addingVariant" placeholder="Вариант ответа">
+							<span class="input-group-btn">
+								<button ng-click="addVariant()" class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Добавить</button>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<ul class="list-group">
+					<li class="list-group-item" ng-repeat="variant in addingQuestion.variants track by $index">
+						{{variant}}
+					</li>
+				</ul>				
+				
+				<div class="btn-group btn-group-justified" role="group" aria-label="...">
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default" ng-click="addQuestion()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Добавить вопрос</button>
+					</div>
+				</div>				
+			</div>
+		</div>
+		
+		<div class="panel panel-default">
+			<div class="panel-heading">Вопросы</div>
+			<div class="panel-body">
+				<ul class="list-group">
+					<li class="list-group-item" ng-repeat="question in questions">
+						{{question.title}}
+					</li>
+				</ul>				
+			</div>
+		</div>
+		
+		<div class="btn-group btn-group-justified" role="group" aria-label="...">
+			<div class="btn-group" role="group">
+				<button type="button" class="btn btn-default">Отмена</button>
+			</div>
+			<div class="btn-group" role="group">
+				<button type="button" class="btn btn-default" ng-click="test()" >Тест</button>
+			</div>
+			<div class="btn-group" role="group">
+				<button type="button" class="btn btn-default" ng-click="saveTest()" >Сохранить</button>
+			</div>
+		</div>		
+	</div>
+</div>

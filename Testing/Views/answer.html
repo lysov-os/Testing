@@ -1,0 +1,25 @@
+<div id="testingDiv">
+	<div id="infoDiv">
+		Времы выполнения:
+	</div>
+	<div>			
+		<div id="questionDiv">
+			<p ng-bind-html="questions[activeQuestion].question"></p>			
+		</div>
+		<div id="variantsDiv">	
+			<ul>
+				<li ng-repeat="variant in questions[activeQuestion].variants">
+					<input type="checkbox" ng-model="variant.checked">
+					<span ng-bind-html="variant.variant"></span>
+				</li>
+			</ul>
+		</div>			
+
+		<div id="buttonsDiv">
+			<input type="button" value="Предыдущий вопрос" ng-click="prevQuestion()">
+			<input type="button" value="Следующий вопрос" ng-click="nextQuestion()">
+			<br />
+			<input type="button" value="Завершить опрос" ng-click="saveAnswer()">			
+		</div>
+	</div>
+</div>

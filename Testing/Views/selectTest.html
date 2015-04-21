@@ -1,0 +1,16 @@
+<div>
+	<div>
+		Тесты
+	</div>
+	<div>	
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="test in tests">
+				<div>
+					{{test.Title}}					
+				</div>
+				<button type="button" class="btn btn-default" ng-click="deleteTest(test.Id, $index)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Удалить</button>
+				<button type="button" class="btn btn-default" onclick="window.location.href='/page2'"><span class="glyphicon glyphicon-play" aria-hidden="true"></span>Пройти тест</button>
+			</li>
+		</ul>
+	</div>
+</div>

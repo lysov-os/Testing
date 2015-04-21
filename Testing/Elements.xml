@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="RootModule">
+    <File Path="Controllers\controllers.js" Url="Controllers/controllers.js" ReplaceContent="TRUE" />
+    <File Path="Views\answer.html" Url="Views/answer.html" ReplaceContent="TRUE" />
+    <File Path="Views\createTest.html" Url="Views/createTest.html" ReplaceContent="TRUE" />
+    <File Path="Views\html.txt" Url="Views/html.txt" ReplaceContent="TRUE" />
+    <File Path="Views\selectTest.html" Url="Views/selectTest.html" ReplaceContent="TRUE" />
+  </Module>
+</Elements>
